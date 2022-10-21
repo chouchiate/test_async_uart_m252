@@ -11,11 +11,6 @@
 
 #include "../includes.h"
 
-enum
-{
-    eUART_RX_Received_Data_Finish = 0,
-    eUART_RX_Received_Data_NOT_Finish
-};
 
 volatile uint8_t g_au8UART_RX_Buffer[RX_BUFFER_SIZE] = {0}; // UART Rx received data Buffer (RAM)
 volatile uint8_t g_bUART_RX_Received_Data_State = eUART_RX_Received_Data_NOT_Finish;

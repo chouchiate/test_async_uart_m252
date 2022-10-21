@@ -7,6 +7,12 @@
 #define RX_TIMEOUT_CNT 60 //40~255
 #define FIFO_THRESHOLD 4
 
+typedef enum
+{
+    eUART_RX_Received_Data_Finish = 0,
+    eUART_RX_Received_Data_NOT_Finish
+};
+
 extern volatile uint8_t g_au8UART_RX_Buffer[RX_BUFFER_SIZE]; // UART Rx received data Buffer (RAM)
 extern volatile uint8_t g_bUART_RX_Received_Data_State;
 extern volatile uint8_t g_u8UART_RDA_Trigger_Cnt; // UART RDA interrupt trigger times counter
